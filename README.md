@@ -15,18 +15,12 @@ Party_Rock is a web-based application designed to create a fun and interactive p
 - **JavaScript**: Handles user interaction and animation logic.
 
 ## Installation
-1. Clone the repository:
+✅. Clone the repository:
     ```bash
     git clone https://github.com/skmaurya05550/partyrock-aws-clone.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd partyrock
-    ```
-3. Open `index.html` in your web browser:
-    ```bash
-    open index.html
-    ```
+
+    ```bash    ```
+
 
 ## Usage
 - Click the "Start the Party!" button on the page to activate the animations.
