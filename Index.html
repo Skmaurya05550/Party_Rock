@@ -1,1 +1,107 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partyrock App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #282c34;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            animation: neon 1.5s infinite alternate;
+        }
+        @keyframes neon {
+            0% {
+                text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99;
+            }
+            100% {
+                text-shadow: 0 0 20px #00ff99, 0 0 30px #00ff99, 0 0 40px #00ff99;
+            }
+        }
+        .party-button {
+            background-color: #00ff99;
+            border: none;
+            padding: 15px 30px;
+            color: #282c34;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #00ff99;
+            transition: transform 0.2s;
+        }
+        .party-button:hover {
+            transform: scale(1.1);
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4d4d;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: fall 3s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: rotate(0deg);
+            }
+            100% {
+                top: 110%;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Partyrock App</h1>
+        <button class="party-button" onclick="startParty()">Start the Party!</button>
+    </div>
+
+    <script>
+        function startParty() {
+            for (let i = 0; i < 100; i++) {
+                createConfetti();
+            }
+        }
+
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            document.body.appendChild(confetti);
+            
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.backgroundColor = getRandomColor();
+            confetti.style.animationDuration = Math.random() * 2 + 2 + 's';
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 3000);
+        }
+
+        function getRandomColor() {
+            const colors = ['#ff4d4d', '#ffcc00', '#33cc33', '#3399ff', '#9900cc'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+</body>
+</html>
+
+
+
