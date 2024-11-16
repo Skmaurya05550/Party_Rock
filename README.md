@@ -17,7 +17,7 @@ Party_Rock is a web-based application designed to create a fun and interactive p
 ## Installation
 ✅. Clone the repository:
     ```bash
-    git clone https://github.com/skmaurya05550/partyrock-aws-clone.git
+    git clone https://github.com/skmaurya05550/party_rock.git
 
     
 
