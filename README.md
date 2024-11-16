@@ -19,7 +19,7 @@ Party_Rock is a web-based application designed to create a fun and interactive p
     ```bash
     git clone https://github.com/skmaurya05550/partyrock-aws-clone.git
 
-    ```bash    ```
+    
 
 
 ## Usage
